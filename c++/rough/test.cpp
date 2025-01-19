@@ -1,3 +1,5 @@
+/*---------------------------------------------*
+
 #include <iostream>
 #include <cmath>
 using namespace std; // Boilerplate code,    #include <iostram>
@@ -9,7 +11,7 @@ using namespace std; // Boilerplate code,    #include <iostram>
 // comment, use //   , shortcut select the text and press ctrl +     . It saves my time for now else i have to write std::cout everywhere it required 
 int main() //std means standerd it represent that the globle object such as cout is taken from standerd convension, std::cout, std::endl, using namespace std;
 {                      // >>, << are called overloaded operators 
-    /*----------------------*
+    
     
     cout << "My name is Aditya \n Aman" <<"\n"; // <<"\n" is faster then <<endl
     int a = 2147483649; // I observed that if I write a = from -2147483649 to +212147483647 it display same, but from 2147483648 to 4294967296 the vale get started from -1 to -2147483648, apart from this it shows format error which is obvious because 4 bytes of space 1 byte store 8 bits that is 32, emplies 2^32 data space
@@ -134,12 +136,38 @@ do
 // loop has more loops in is Nested loops
  int a =5;
  cout << round((sqrt(a)));
-/--------------------------------------------------*/
 char A='A', Z='Z';
 bool TRUE =true;
 bool FALSE = false;
 cout<< (A<Z)<< endl;
+cout << (Z-A)<< "\n"; // value is coming 20
+cout << ('Z'-'A')<<"\n";
+cout << ++A << endl;
+    return 0;
 
+} /--------------------------------------------------*/
+
+#include <iostream>
+using namespace std;
+
+//function definition
+void printAdi(){                // this is a void type funicion, void means null
+    cout << "I am Aditya\n";
+
+}
+int asd(){                               // this is an int type function
+    cout << "Khushi is a girl\n";
+    return 3;
+}
+
+int main() //This is called a funcion whose type is int
+{
+    //funcition call / invoke
+    printAdi(); 
+    asd();
+    cout /*<< printAdi()*/ << asd()<<endl; //asd() first called "khushi is a girl" and then returned the vale 3
+        // here printAdi() did not have any type so print the function will show error!
+    
 
 
     return 0;
