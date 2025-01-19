@@ -436,3 +436,5 @@ using namespace std;
 unsigned int x = -10;
 cout<<x;// since it is a unsigned data there for the output will be : 4294967286 , these come from adding + 2^32 with -10 because the bit which was responsible for storing value will be taken to consideratin in the calculation...
 // -10 = 10 + 2^(size data type in bit or 8*Bytes)
+
+//ARRAYS
