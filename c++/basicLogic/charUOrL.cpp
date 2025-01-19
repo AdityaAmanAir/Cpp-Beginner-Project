@@ -17,6 +17,5 @@ int main()
     {
         cout << " The character is not an Alphabet!";
     }
-
     return 0;
 }

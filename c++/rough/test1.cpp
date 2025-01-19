@@ -1,4 +1,3 @@
-/*---------------------------------------------*
 
 #include <iostream>
 #include <cmath>
@@ -8,10 +7,13 @@ using namespace std; // Boilerplate code,    #include <iostram>
 
 //     return 0
 // }
-// comment, use //   , shortcut select the text and press ctrl +     . It saves my time for now else i have to write std::cout everywhere it required 
+// comment, use // it is called single line comment , and /* xyz*/ /*is multi line comment  , shortcut select the text and press ctrl +     . It saves my time for now else i have to write std::cout everywhere it required 
 int main() //std means standerd it represent that the globle object such as cout is taken from standerd convension, std::cout, std::endl, using namespace std;
 {                      // >>, << are called overloaded operators 
     
+    cout<<"Hello World\n";
+    printf("Omg World");
+
     
     cout << "My name is Aditya \n Aman" <<"\n"; // <<"\n" is faster then <<endl
     int a = 2147483649; // I observed that if I write a = from -2147483649 to +212147483647 it display same, but from 2147483648 to 4294967296 the vale get started from -1 to -2147483648, apart from this it shows format error which is obvious because 4 bytes of space 1 byte store 8 bits that is 32, emplies 2^32 data space
@@ -20,6 +22,10 @@ int main() //std means standerd it represent that the globle object such as cout
     int d = -4;          // int has 4 bytes i.e 32 bits i.e 2^32 data (1 or 0)
     int x =0, y= -1, z=100;
     int m=1 , n =2, o =3 , p= 5, q= 7;
+
+    //if you need to set the value of a variable as constant and it should not change through out the program than use const int uid = 65069960
+
+    const int uid = 65069960;
                            // char has 1 byte
     cout << a <<endl;
     cout << b << "\n" ;    // Don't forget to terminate the sentence by using ;
@@ -29,6 +35,7 @@ int main() //std means standerd it represent that the globle object such as cout
     char Character = 'A' ;    // I did an error here , insted of using '' I used "" which is wrong for char , i am writing any statement here so use ''
     char grade = 'mk cf' ;    // i observed that, chat stores only one letter (ofcourse because of less space allotment) , in this if i try to write more then one charecters then it will take the last charecter of the word/ sentence as an variable
     cout << Character << " " << grade <<endl;
+    string sentence = 'HII bro' // strings are immutable that is they cannot be change in between after they are defined 
 
     float PI = 3.1415926f;     // if we need the values of variable in decimel the we use float 
      cout << PI << endl;              // float 4 Bytes , up to 5 decimels, decimel is also called float values 
@@ -65,6 +72,8 @@ cout << Newprice << " " << price <<" "<< price2 << " "<<(int)price2 << endl; // 
     //Operators,  first type of operator is Arithmetic , other two are Relational and logical operators. 
     int sum = m + n ;
     cout << sum << endl;
+    float ss=0.1, sa=0.2; float sz=(ss + sa);
+    cout<< (0.2 +0.1)<< endl<<(ss + sa)<<endl<< sz;
     cout << (p+q) << endl; // +, - , / , % (modulo), *
     cout << "a ="<<(a)<< " and a + a = "<< (a+a) << endl;
     cout << (5/2) << endl; // ans is 2 because it has int/ int i.e int  as data type, 
@@ -91,7 +100,7 @@ cout << (5/(double)2) << endl; // ans was 2.5 because it has int / double i.e do
  int w = m++ ;  //w =2 , and m will become 3
  cout << w << m ; // if you wrote cout << w, m ; the compiler will print only w and not m because you didnot use <<
  
- // Conditional Staements [(if-else) syntax (rules), ()]
+    // Conditional Staements [(if-else) syntax (rules), ()]
 
  if (age>=18){ 
     cout << endl << "You are a adult"<< endl;
@@ -105,8 +114,8 @@ cout << (5/(double)2) << endl; // ans was 2.5 because it has int / double i.e do
     cout << "\nYou are a minor, I will not tell what kind of number is your age\n";
  }
  cout << (int)Grade << "\n"; 
-// ternary statement
-// condition ? stt1 : strr2    stt1 will be printed if conditon is true  else if the the conditio is false it will print strr
+    // ternary statement
+    // condition ? stt1 : strr2    stt1 will be printed if conditon is true  else if the the conditio is false it will print strr
  
  string gg;
  string _no = "no";
@@ -145,30 +154,285 @@ cout << ('Z'-'A')<<"\n";
 cout << ++A << endl;
     return 0;
 
-} /--------------------------------------------------*/
-
+} 
 #include <iostream>
 using namespace std;
 
 //function definition
+
+
 void printAdi(){                // this is a void type funicion, void means null
-    cout << "I am Aditya\n";
+    cout << "Aditya is a boy\n";
 
 }
 int asd(){                               // this is an int type function
-    cout << "Khushi is a girl\n";
+    cout << "Vaishali is a girl\n";
     return 3;
 }
 
 int main() //This is called a funcion whose type is int
 {
     //funcition call / invoke
-    printAdi(); 
-    asd();
-    cout /*<< printAdi()*/ << asd()<<endl; //asd() first called "khushi is a girl" and then returned the vale 3
-        // here printAdi() did not have any type so print the function will show error!
-    
+    //printAdi(); 
+    asd(); // it will invoke only the function and not the return value
+    cout /*<< printAdi()*//*------------------------ << asd () <<endl; //asd() first called "khushi is a girl" and  "/n" and then returned the value 3
+        // here printAdi() did not have any type so printing the function will show error!
+    cout << asd << " " << printAdi << endl; // if () are not put after the function name the it will return the value 1, regardless of it data type;
 
+// if we try to store the funcion in an variable the the value stored in the variable will be the return value of the function; */
+int zzc = asd(); // int function's  without ()'s  has defalt return value 1 but if we try to store in an variable it will show an error & funcion without data type (void) will also show error;
+cout << zzc<< endl;
+    // if we call return statement in the function , no command after it will be exucuted;
+
+    // Function Synthax
+
+    // returntype functionName (Type paraeters 1, type parameater 2, ...){
+    //   do the work/ task     }
+
+    // redundancy is the sign of a BAD programmer, redundancy means unnecessary repetation of code/ work .
+
+/*Function in memory 
+ 
+    Memory are of two types : Call Stack and Heep;
+    call stack (memory) < stacl frame() i.e functions eg main, sum, printAdi,... stack is like book upon book upon book... that is stack and book is called stack frame and each frame contain function , upper book (stack frame) contain other function;   
+
+ // Pass by Value; */
 
     return 0;
 }
+
+#include <iostream>
+using namespace std;
+int ppf=20;
+int main(){
+ int gghh = 10;
+ cout <<gghh<<endl;
+ cout << ppf;
+    return 0;
+
+#include <iostream>
+using namespace std;
+int ppf=20;
+int testfun(){
+    ppf *=3;
+    cout << ppf << endl;
+    return (ppf+1);
+}
+int main(){
+ int gghh = 10, ppf =50;
+ cout <<gghh<<endl;
+ cout << ppf<< endl; 
+ testfun();
+ cout  << testfun();
+    return 0;
+}}
+#include <iostream>
+using namespace std;
+void fun (){
+    int c= 25;
+    cout << "c = "<< c<< endl;
+    }
+int main(){
+fun();
+cout << c <endl;
+    return 0;
+}
+        //this example shows that the fuction is invald out side the function , anf if we try to call the fumction it will show the error that the variable is not defined!            what happen her is that the memory in the stack get errased  
+//Binary number
+        //decimal to bunary conversion can be done by storing question and remender in memeory
+//----decimal to binary   ->  find LCM with 2 (binary) take remenders as the vales of the number in binary system , ## arrange remender from down to up direction!
+//----binary to Decimal   ->  binary digits * 2^(digit's position - 1) 
+//----binary to hexa       -> remember the base 0 to 7 , seprate the given number in the set of 4 digits and distinguish the number...
+//----hexa to binary        -> vice versa
+//----decimal to hexa        -> same but with hexa base
+//----hexa to decimal         -> same but with hexa base
+/*To convert decimal to binary then we have to do repeated division or 2 and finds its remender untill we get 0 in questant  */
+
+//Two's compliment 
+/* In just a simple word : we store negative numbers in different way because the old system was not fitting with the calculation!! :) 2nd reaseon was the old system also had a problem of +0 and -0;
+
+1st -- Define the number of bits , eg 1,2,3,4,etc..
+2nd -- Define the 1st most bit ... example : lets us define a 5 bit -> _ _ _ _ _ -> the first most (MSB) will be reserved for sign , which means only 4 bits are mathematicaly operatable, 0 = + and 1 = - for the 1st bit. eg is 01010 i.e 10 in decimal 
+3rd -- Inter change the bits value i.e. 1 to 0 and 0 to 1, eg -> 01010 become 10101
+4th -- add +1 to it eg. -> 10101 becomes 10110
+10110 is  -10 in decimal
+
+NOTE ### 
+if -10 was not 5 in bit, then the vales whould be different 
+if it was 8 bit system then the vale of -10 would have = 11110101
+
+MY LOGIC ###
+The scientist just inverted the order of number i.e. 0,1,2,3,4,5,6,7,8,9 = 0,9,8,7,6,5,4,3,2,1 respectively 
+
+given below will make it clear :-
+
+5 bit binary system
+
+    
+10001 = -15
+10010 = -14
+    .
+    .
+    .
+11101 = -3
+11110 = -2
+11111 = -1
+00000 =  0
+00001 = +1
+00010 = +2
+00011 = +3
+    .
+    .
+    .
+01110 = +14
+01111 = +15
+10000 = -16 
+10001 = -15
+10010 = -14
+    .
+    .
+    .
+11110 = -2
+11111 = -1
+00000 =  0
+00001 = +1
+00010 = +2
+    .
+    .
+    .    
+MSB = Most Significant Bit (The left most bit which desides the sign +/- of number)
+
+    borrowing / carring +1 fits in the system hence no calculation mistake :)
+*/
+
+//BITWISE OPERATORS
+// operaters which works with the bits... 
+/* --Bitwise & (AND)
+   --Bitwise | (OR)
+   --Bitwise  ^ (XOR)
+   --Bitwise ~ (NOT) 
+   --Bitwise << (Left shift)
+   --Bitwise << (Right shift)*/
+
+
+/*
+Bitwise & (AND)
+0,0  0
+0,1  0
+1,0  0
+1,1  1
+
+eg
+(4 & 12)
+4  = ...0100
+12 = ...1100
+     ...0100 = 4
+
+eg
+(4 & 8)
+4 = ...0100
+8 = ...1000
+    ...0000 = 0       
+
+Bitwise | (OR)
+0,0  0
+0,1  1
+1,0  1
+1,1  1
+
+eg
+(4 | 12)
+4  = ...0100
+12 = ...1100
+     ...1100 = 12  
+eg
+(4 | 8)
+4 = ...0100
+8 = ...1000
+    ...1100 = 12     
+
+Bitwise  ^ (XOR)
+0,0  0
+0,1  1
+1,0  1
+1,1  0
+
+eg
+(4 ^ 12)
+4  = ...0100
+12 = ...1100
+     ...1000 = 8
+
+Bitwise ~ (NOT)
+0  1
+0  1
+1  0
+1  0
+
+eg
+20=   0...0010100
+~20=  1...1101011 = -21
+
+--Bitwise << (Left shift)
+if i write : n<<i
+the bits of n will shift i places towards left, mathematically n*2^i
+
+eg
+10 = 1010
+10<<2
+101000 = 40
+
+eg
+11 = 1011
+11<<3
+101100 = 44
+
+   --Bitwise << (Right shift)
+
+if i write : n>>i
+the bits of n will shift i places towards right, mathematically n/2^i
+eg
+10 = 1010
+10>>1
+101 = 5
+
+eg
+11 = 1011
+11>>3
+101 = 5
+
+##NOTE## MSB are not affected by left or right shift operator 
+
+*/
+ 
+ //SCOPE : area of variable
+
+/* --Local scope 
+-- global scope */
+
+#include <bits/stdc++.h>
+using namespace std;
+int Y =120 // this is in global scope
+int main(){
+int x = 420; // this is in local scope
+if(X=420){
+
+    int C= 0; // this is in local scope
+}
+    return 0;
+}
+// DATA TYPE MODIFIER
+/* To change the meaning of exesting data type by using modifiers
+
+--long = will give >=4 bits = 8 byte
+--short = will make it of 2 bytes
+--long long
+--signed = by defalt all the number comes with MSB 
+--unsigned = will remove the MSB and make it unsigned, this is done general due tho increase the space. 
+
+NOTE##*/
+#include <iostream>
+using namespace std;
+unsigned int x = -10;
+cout<<x;// since it is a unsigned data there for the output will be : 4294967286 , these come from adding + 2^32 with -10 because the bit which was responsible for storing value will be taken to consideratin in the calculation...
+// -10 = 10 + 2^(size data type in bit or 8*Bytes)

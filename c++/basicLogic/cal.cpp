@@ -24,7 +24,7 @@ int main()
         break;
 
         case '/' :
-     cout << num1 << op << num2 << " = " << (num1 / num2) << "\n";
+        cout << num1 << op << num2 << " = " << (num1 / num2) << "\n";
         break;
 
         case '*' :

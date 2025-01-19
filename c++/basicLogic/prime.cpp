@@ -3,10 +3,11 @@
 using namespace std;
 int main()
 {int64_t Number, i= 2;
-bool isPrime = true, isPositive = false;
-    cout << "\n This programme will tell you that if a number is Prime or not.\n Insert a number :  ";
+bool isPrime = true;
+    cout << "\n This program will tell you that if a number is Prime or not.\n Insert a number :  ";
     cin >> Number;
-    while (Number > 1, i<= sqrt(Number))
+    int j=sqrt(Number);
+    while (Number > 1 && i<= j)
     {
        if(Number%i==0)
             {
@@ -21,10 +22,9 @@ bool isPrime = true, isPositive = false;
     }
         if(isPrime == true && Number > 1)
         {
-            isPositive = true;
             cout << "The number " << Number << " is PRIME.";
         }
-        if(isPrime == true && isPositive == false)
+        else
         {
             cout << "The number " << Number << " is NOT a Prime.";
         }
