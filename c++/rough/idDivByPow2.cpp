@@ -34,11 +34,12 @@ int main(){ int num;
         
     }}
 // Method 3----
-/*int num4;
+int num4;
 num4 = num;
     while((num3<<1) == (num4>>1)){
         num3/=2;
         num4/=2;
+        cout<<1112;
     }num3/=2;
     num4/=2;
     while(num3<<1 == num4>>1){
@@ -50,7 +51,7 @@ num4 = num;
         }else
         {
            cout<<" Method 3 states : NOT a power of 2\n";
-        }*/
+        }
         
 
 
