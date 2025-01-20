@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 int main(){ int num;
+bool flag = false;
     cout<<"This Program will find if the given number is power of 2 or not.\n Input the NUMBER : ";
     cin>> num;
    int num2=num;
@@ -35,26 +36,30 @@ int main(){ int num;
     }}
 // Method 3----
 int num4;
-num4 = num;
-    while((num3<<1) == (num4>>1)){
+num4 = num3;
+//cout<<num3<<num4;
+    while((num3==(num4>>1)<<1)){
         num3/=2;
         num4/=2;
-        cout<<1112;
+        if (num3==0)
+        {
+            break;
+        }
+        
     }num3/=2;
     num4/=2;
-    while(num3<<1 == num4>>1){
+    while((num3==(num4>>1)<<1)){
         num3/=2;
-        num4/=2;}
+        num4/=2;
         if (num3==0)
         {
             cout<<"Method 3 states : YES, a power of 2\n";
-        }else
+            flag = true;
+            break;
+        }}
+        if(flag==false)
         {
-           cout<<" Method 3 states : NOT a power of 2\n";
+           cout<<"Method 3 states : NOT a power of 2\n";
         }
-        
-
-
-
     return 0;
 }

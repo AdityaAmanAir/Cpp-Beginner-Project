@@ -1,7 +1,12 @@
-    #include<bits/stdc++.h>
+    #include <bits/stdc++.h>
     using namespace std;
     int main(){
-    int a =20;
-    cout<<~a;
+        int t;
+        cin>>t;
+        while(t--){
+            double a,b;
+            cin>>a>>b;
+            cout<<setprecision(11)<< double(a/b);
+        }
+        return 0;
     }
-    
